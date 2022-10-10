@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-size: 100%;
+}
+ 
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*I dont want to use this for this particular project, that's why it's commented out*/
+/* p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+} */
+
+/*this should be used only when working with a javascript framework like REACT or Next.Js*/
+/* #root, #__next {
+    isolation: isolate;
+} */
+
+
+
+/*My styling starts here*/
+body {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 0 30px 0;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--Very-dark-cyan);
+    letter-spacing: 0.6rem;
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    gap: 45px;
+    width: 920px;
+    min-height: 485px;
+    border-radius: 25px;
+    background-color: var(--White);
+    padding: 30px 33px;
+    box-shadow: 0px 0px 25px hsla(186, 14%, 43%, 0.32);
+    overflow: hidden;
+}
+
+.values, .results{
+    display: grid;
+    width: 50%;
+}
+
+
+/*===================== VALUES INPUT SECTION ===============================*/
+.values {
+    grid-template-rows:  1fr 2fr 1fr;
+}
+
+.values p {
+    color: var(--Grayish-cyan);
+}
+
+input {
+    display: block;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border-style: none;
+    height: 50px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+label {
+    color: var(--Very-dark-cyan);
+    margin-top: 12px;
+}
+
+input[type="number"] {
+    text-align: right;
+    background-color: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    width: 100%;
+    caret-color: #31e6f0;
+}
+
+input[type="number"]::placeholder {
+    color: var(--Light-grayish-cyan);
+}
+
+input[type="number"]:hover {
+    border: 2px solid #31e6f0;
+}
+
+.bill_value, .people_value {
+    position: relative;
+}
+
+.bill_value input, .people_value input {
+    margin-top: 8px;
+}
+
+label[for="bill"] img, label[for="people_number"] img {
+    position: absolute;
+    left: 20px;
+    top: 49px;
+}
+
+.tip_select input {
+    display: inline;
+}
+
+.tip_select {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.tip_select input[type="number"] {
+    text-align: center;
+}
+
+.tip_select input[type="number"]::placeholder {
+    color: var(--Dark-grayish-cyan);
+}
+
+.tip_select_percent {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.tip_select_percent:hover, .active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+
+/*===================== RESULTS SECTION ===============================*/
+.results {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-grayish-cyan);
+    border-radius: 15px;
+    padding: 40px;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.person {
+    color: var(--Grayish-cyan);
+    font-size: 0.8rem;
+}
+
+.tip_amount, .total_amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip_amount_result, .total_amount_result {
+    color: var(--Strong-cyan);
+    font-size: 3rem;
+}
+
+input[type="reset"] {
+    width: 100%;
+    height: 50px;
+    color: var(--Very-dark-cyan);
+    align-self: end;
+}
+
+input[type="reset"]:hover {
+    background-color: hsl(185, 49%, 78%);
+}
+
+.normal_color {
+    background-color: var(--Strong-cyan);
+}
+
+.reset_button_color {
+    background-color: #2e959a;
+    opacity: 0.5;
+}
+
+/*===================== ERROR STYLES ===============================*/
+.error {
+    border: 2px solid #f00;
+}
+
+.error_msg {
+    float: right;
+    color: #f00;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        min-height: 150%;
+    }
+    
+    form {
+        display: block;
+        width: 500px;
+        height: 800px;
+        border-radius: 25px;
+        padding: 30px 33px;
+        box-shadow: 0px 0px 25px hsla(186, 14%, 43%, 0.32);
+        overflow: hidden;
+    }
+
+    .values, .results {
+        width: 100%;
+        display: block;
+    }
+
+    .bill_value {
+        margin-bottom: 35px;
+    }
+
+    .people_value, .results {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding-bottom: 0;
+        display: block;
+        min-height: 100%;
+    }
+    form {
+        width: 100%;
+        height: auto;
+        border-radius: 25px 25px 0 0;
+        margin-top: 40px;
+    }
+
+    input[type="reset"] {
+        margin-top: 35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tip_select {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tip_amount_result, .total_amount_result {
+        font-size: 2.4rem;
+    }
+
+    form {
+        padding: 23px;
+    }
+
+    .results {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    input {
+        font-size: 1.2rem;
+    }
+    .tip_amount_result, .total_amount_result {
+        font-size: 1.8rem;
+    }
+}

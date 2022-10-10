@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/profile-pic.png">
+  
+  <title>Ovie | Tip calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>spli <br> tter</h1>
+
+    <form>
+
+      <div class="values">
+       <div class="bill_value">
+        <label for="bill">
+          Bill
+          <input type="number" name="number" id="bill_amount" placeholder="0">
+          <img src="./images/icon-dollar.svg" alt="" aria-hidden="true">
+        </label>
+       </div>
+        
+          <label for="tip_percent">
+            Select Tip %
+            <div class="tip_select">
+              <div class="tip_select_percent">5%</div>
+              <div class="tip_select_percent">10%</div>
+              <div class="tip_select_percent active">15%</div>
+              <div class="tip_select_percent">25%</div>
+              <div class="tip_select_percent">50%</div>
+              <input type="number" name="number" id="custom_tip" placeholder="Custom">
+            </div>
+          </label>
+
+       <div class="people_value">
+        <label for="people_number">
+          Number of People
+          <span class="error_msg hide">Can't be zero</span>
+          <input type="number" name="number" id="people_number" placeholder="0">
+          <img src="./images/icon-person.svg" alt="" aria-hidden="true">
+        </label>
+       </div>
+      
+      </div>
+  
+      <div class="results">
+        <div class="tip_amount">
+          <p>
+            Tip Amount <br>
+            <span class="person">/ person</span>
+          </p>
+          <div class="tip_amount_result">
+            &dollar;0.00
+          </div>
+        </div>
+      
+        <div class="total_amount">
+          <p> 
+           Total <br>
+            <span class="person">/ person</span>
+          </p>
+          <div class="total_amount_result">
+           &dollar;0.00
+          </div>
+        </div>
+
+        <input type="reset" value="Reset" class="normal_color">
+      </div>
+    </form>
+    <script src="./app.js"></script>  
+</body>
+</html>
