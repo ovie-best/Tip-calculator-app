@@ -25,13 +25,14 @@ Users should be able to:
 - Calculate the correct tip and total cost of the bill per person
 
 ### Screenshot
+![Screenshot 2022-10-10 184024](https://user-images.githubusercontent.com/86495524/194923999-ec59e36d-b0fc-4c9b-91d7-c8a708194826.png)
 
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [MY Solution]( https://www.frontendmentor.io/solutions/tip-calculator-app-with-html-css-and-vanilla-javascript-EhRV7asapa)
+- [Live Site](https://ovie-best.github.io/Tip-calculator-app/)
 
 ## My process
 
@@ -69,7 +70,7 @@ function handleClick(event) {
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Ovie Nathaniel On LinkedIn](https://www.linkedin.com/in/ovie-nathaniel/)
+- Frontend Mentor - [@ovie-best](https://www.frontendmentor.io/profile/ovie-best)
+- Twitter - [@oviebest_2](https://twitter.com/oviebest_2)
 
